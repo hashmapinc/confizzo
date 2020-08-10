@@ -8,7 +8,7 @@ confizzo is a configuration management library. It is designed to contain many v
 
 Multifile configurations, in confizzo terms, are configurations which are partitioned into multiple files. One assumption is that when one configuration contains configuration information of another entity, that that configuration is then stored in a separate configuration file and referenced by type corresponds to filename and the name of the configuration in the file.
 
-### Speciications
+### Specifications
 
 Here the configuration is parsed into one or more files. When a configuration has a dependency on another object - via composition - the configuration for such 
 objects will be stored in separate files. ALl objects of similar type - save the entry point objects, will be stored in files denoted by name the kind of class 
