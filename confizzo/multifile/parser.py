@@ -13,6 +13,7 @@
 # limitations under the License.
 import yaml
 
+from confizzo.ConfizzoError import ConfizzoError
 from confizzo.multifile.config_manager import ConfigManager
 
 
@@ -20,6 +21,15 @@ class Parser:
 
     @classmethod
     def __read_config(cls, configuration_name: str) -> dict:
+        """
+        Retrieve configuration given the name of the configuration.
+
+        Args:
+            configuration_name: Name of configuration to use as reference.
+
+        Returns: Configuration dictionary.
+
+        """
 
         filename = ConfigManager.get(configuration_name)
         with open(filename, 'r') as stream:
@@ -29,5 +39,24 @@ class Parser:
 
     @classmethod
     def get(cls, configuration_name: str) -> dict:
+        """
+        Obtain a configuration
+        Args:
+            configuration_name:
 
-        return cls.__read_config(configuration_name)
+        Returns: Configuration as dict.
+
+        Raises:
+            ConfizzoError: When the configuration required values are not present.
+
+        """
+
+        returnable_config = cls.__read_config(configuration_name)
+
+        if 'conf' not in returnable_config.keys():
+            raise ConfizzoError("conf not present in configuration, but is required.")
+
+        if 'type' not in returnable_config.keys():
+            raise ConfizzoError('type not present in configuration, but is required.')
+
+        return returnable_config
