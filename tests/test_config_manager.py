@@ -29,7 +29,7 @@ class TestConfigManager(TestCase):
         pass
 
     def test_read_root(self):
-        expected_result = "/Users/johnaven/accelerators/confizzo/tests/multi_file/main.yml"
+        expected_result = os.path.join(os.path.dirname(__file__), "multi_file/main.yml")
         root_conf = ConfigManager.get(key='system_1')
         self.assertEqual(expected_result, root_conf)
 
