@@ -1,3 +1,4 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgitlab.com%2Fhashmapinc%2Fctso%2Futilities%2Fconfizzo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgitlab.com%2Fhashmapinc%2Fctso%2Futilities%2Fconfizzo?ref=badge_shield)
 [![codecov](https://codecov.io/gl/hashmapinc:ctso:utilities/confizzo/branch/%5Cx646576656c6f706d656e74/graph/badge.svg?token=ITYIXT92BE)](https://codecov.io/gl/hashmapinc:ctso:utilities/confizzo)
 # confizzo
 
