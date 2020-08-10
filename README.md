@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gl/hashmapinc:ctso:utilities/confizzo/branch/%5Cx646576656c6f706d656e74/graph/badge.svg?token=ITYIXT92BE)](https://codecov.io/gl/hashmapinc:ctso:utilities/confizzo)
+
 # confizzo
 
 confizzo is a configuration management library. It is designed to contain many versions of configuration managed approaches into a single API.
