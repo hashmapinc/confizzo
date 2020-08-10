@@ -11,19 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import json
 import os
-from typing import NamedTuple
 
 import yaml
 
 from confizzo.ConfizzoError import ConfizzoError
-
-
-# class ConfigIdentifier(NamedTuple):
-#     name: str
-#     conf_type: str
-#     file_name: str
 
 
 class ConfigManager:
@@ -91,13 +83,13 @@ class ConfigManager:
 
         errors = []
         if 'conf_type' not in entry.keys():
-            errors.append(f"conf_type not found in entry.")
+            errors.append("conf_type not found in entry.")
 
         if 'var_name' not in entry.keys():
-            errors.append(f"var_name not found in entry.")
+            errors.append("var_name not found in entry.")
 
         if 'name' not in entry.keys():
-            errors.append(f"name not found in entry.")
+            errors.append("name not found in entry.")
 
         if len(errors) > 0:
             raise ConfizzoError(f"The following error were identified:/n{'/n'.join(errors)}")

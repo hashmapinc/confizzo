@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 coverage = "*"
 nose2 = "*"
+prospector = "*"
 
 [packages]
 pyyaml = "*"
